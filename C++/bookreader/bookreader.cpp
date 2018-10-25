@@ -3,7 +3,7 @@
 #include <vector>
 #include <map>
 #include <string>
-std::vector<std::string> readFile(std::string bookdir){
+stdvector<std::string> readFile(std:string bookdir){
     std::ifstream file;
     file.open(bookdir);
     if(!file){
@@ -37,7 +37,7 @@ std::pair<std::string, int> mostFreq(std::vector<std::string> words){
     std::map<std::string, int> wordmap;
     for(int x = 0; x < words.size(); x++){
         words[x] = format(words[x]);
-        std::map<std::string, int>::iterator it = wordmap.find(words[x]);
+        std:map<std:string, int>::iterator it = wordmap.find(words[x]);
         if(it != wordmap.end()){
             it->second = it->second+1;
         }
